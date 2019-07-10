@@ -2,7 +2,7 @@ library(validate)
 library(stringr)
 source("R/FDL.R")
 
-# Example of good and bad data on par 4.2.2 of ESTAT 
+# Example of good and bad data on par 4.2.2 of ESTAT doc
 dat <- read.csv('data/FDL.csv')
 
 rule <- validator(FDL(PARTNER, min=2, max=4) == TRUE)
