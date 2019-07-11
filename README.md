@@ -3,10 +3,10 @@ Draft implementations of generic validation rules in R-validate syntax
 
 This is work in progress.
 
-#### Already implemented:
-- FDL (case 1 and 2)
-- FDM (full)
-- COV (full)
+#### Implemented:
+- FDL (all cases)
+- FDM (all cases)
+- COV (all cases)
 
 
 ### Todo's
