@@ -19,11 +19,12 @@ FDL <- function(d, x=NULL, min=NULL, max=NULL, minDec=NULL, maxDec=NULL) {
     res <- lapply(lengths, function(x) x >= min & x <= max )
     
     if (!is.null(minDec) && !is.null(maxDec)) {
-      # case 3: also check decimals
-      # todo
+      # case 3: also check decimals:
       
-      #res2
-      #combine res and res2
+      lengths <- str_length(str_extract(d, "\\.\\d*")) - 1
+      res2 <- lapply(lengths, function(x) x >= minDec & x <= maxDec )
+      
+      res <- unlist(res) & unlist(res2)
     }
   }
   
