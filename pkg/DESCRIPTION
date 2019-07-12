@@ -1,0 +1,12 @@
+Package: GenericValidationRules
+Type: Package
+Title: Eurostat Generic Validation RUles
+Version: 0.1.0
+Date: 2019-07-12
+Author: Olav ten Bosch, Dick Windmeijer, Mark van der Loo
+Maintainer: Mark van der Loo <mark.vanderloo@gmail.com>
+Description: Implements the 20 most often occurring types of validation rules
+License: GPL (>= 2)
+Suggests: tinytest, validate
+RoxygenNote: 6.1.1
+Encoding: UTF-8

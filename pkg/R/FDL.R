@@ -1,7 +1,17 @@
 # FDL: Check that the length of the data in the field is acceptable
 
-#Note: implemented case 1 and 2 only
-
+#' Check field lengths 
+#'
+#' @param d A character vector
+#' @param x Number of code points required
+#' @param min Mimimum number of code points
+#' @param max Maximum number of code points
+#' @param minDec minimum number of decimal positions
+#' @param maxDec maximal number of decimal positions
+#'
+#'
+#'
+#' @export
 FDL <- function(d, x=NULL, min=NULL, max=NULL, minDec=NULL, maxDec=NULL) {
   
   if (!is.null(x)) {
@@ -29,3 +39,4 @@ FDL <- function(d, x=NULL, min=NULL, max=NULL, minDec=NULL, maxDec=NULL) {
   return(res)
   
 }
+
