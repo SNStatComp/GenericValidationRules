@@ -2,7 +2,7 @@
 % Please edit documentation in R/FDL.R
 \name{FDL}
 \alias{FDL}
-\title{Check field lengths}
+\title{Check that the length of the data in the field is acceptable}
 \usage{
 FDL(d, x = NULL, min = NULL, max = NULL, minDec = NULL,
   maxDec = NULL)
@@ -21,5 +21,8 @@ FDL(d, x = NULL, min = NULL, max = NULL, minDec = NULL,
 \item{maxDec}{maximal number of decimal positions}
 }
 \description{
-Check field lengths
+Check that the length of the data in the field is acceptable
+}
+\references{
+\href{../doc/maintypes.pdf}{Main types of validation rules for ESS data}: FDL
 }

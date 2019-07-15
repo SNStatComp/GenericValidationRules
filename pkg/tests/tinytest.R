@@ -1,5 +1,5 @@
 
 if ( requireNamespace("tinytest", quietly=TRUE) ){
-  tinytest::test_package("pkg")
+  tinytest::test_package("GenericValidationRules")
 }
 

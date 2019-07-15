@@ -1,13 +1,26 @@
-# FDM: Field is Mandatory or empty
-
-FDM <- function(d, mandatoryLevel="Mandatory") {
-  
+#' Field is Mandatory or empty
+#'
+#'
+#' @param d A character vector
+#' @param mandatoryLevel character scalar indicating whether a variable
+#' must be filled or must be empty. 
+#' 
+#' 
+#' 
+#' @references 
+#' 
+#' \href{../doc/maintypes.pdf}{Main types of validation rules for ESS data}: FDM
+#' 
+#' @export
+FDM <- function(d, mandatoryLevel=c("Mandatory","Empty")) {
+  mandatoryLevel <- match.arg(mandatoryLevel)
+  d <- as.character(d)
   if (mandatoryLevel == "Empty") {
-    res <- lapply(d, function(x) x == "" || is.na(x))
+    res <- d == "" | is.na(d)
   }
   
   if (mandatoryLevel == "Mandatory") {
-    res <- lapply(d, function(x) x != "" && !is.na(x))
+    res <- d != "" & !is.na(d)
   }
   
   return(res)

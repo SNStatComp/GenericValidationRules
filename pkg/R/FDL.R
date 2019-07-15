@@ -1,6 +1,4 @@
-# FDL: Check that the length of the data in the field is acceptable
-
-#' Check field lengths 
+#' Check that the length of the data in the field is acceptable
 #'
 #' @param d A character vector
 #' @param x Number of code points required
@@ -9,14 +7,19 @@
 #' @param minDec minimum number of decimal positions
 #' @param maxDec maximal number of decimal positions
 #'
+#' @references 
+#' 
+#' \href{../doc/maintypes.pdf}{Main types of validation rules for ESS data}: FDL
+#' 
+#'
 #'
 #'
 #' @export
 FDL <- function(d, x=NULL, min=NULL, max=NULL, minDec=NULL, maxDec=NULL) {
-  
+  d <- as.character(d)
   if (!is.null(x)) {
     # case 1:
-    return( char(d) == x )
+    return( nchar(d) == x )
   }
   
   if (!is.null(min) && !is.null(max)) {
@@ -31,7 +34,7 @@ FDL <- function(d, x=NULL, min=NULL, max=NULL, minDec=NULL, maxDec=NULL) {
                        # including decimal .
       lengths <- nchar(sub("^[0-9]*\\.","", d))
              # must have decimal . and lengths must be within bounds
-      res <- grepl("\\.",d) & lengths  >= minDec & lengths <= maxDec 
+      res <- res & grepl("\\.",d) & lengths  >= minDec & lengths <= maxDec 
       
     }
   }
