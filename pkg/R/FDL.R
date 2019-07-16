@@ -1,6 +1,6 @@
 #' Check that the length of the data in the field is acceptable
 #'
-#' @param d A character vector
+#' @param d Bare (unquoted) name of a variable
 #' @param x Number of code points required
 #' @param min Mimimum number of code points
 #' @param max Maximum number of code points

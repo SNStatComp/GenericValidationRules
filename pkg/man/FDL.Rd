@@ -8,7 +8,7 @@ FDL(d, x = NULL, min = NULL, max = NULL, minDec = NULL,
   maxDec = NULL)
 }
 \arguments{
-\item{d}{A character vector}
+\item{d}{Bare (unquoted) name of a variable}
 
 \item{x}{Number of code points required}
 

@@ -1,7 +1,7 @@
 library(dplyr)
 
-data <- read.csv('./data/test.csv')
-d2 <- data.frame('c'=  c(1,2,3))
+#data <- read.csv('./data/test.csv')
+#d2 <- data.frame('c'=  c(1,2,3))
 
 REP <- function(data, keyset, ...) {
   res <- data %>%
@@ -17,4 +17,4 @@ ddd <- function(x,y) {
   return(res)
 }
 
-REP(data, d2, a, b)
+#REP(data, d2, a, b)
