@@ -30,7 +30,7 @@ RWD <- function(...){
 #' @return 
 #' For \code{RDW2}: \code{TRUE} when there are no records that have duplicate
 #' values for the variables in the argument, else \code{FALSE}.
-#'
+#' @export
 RWD2 <- function(...){
    anyDuplicated(data.frame(...)) == 0
 }
