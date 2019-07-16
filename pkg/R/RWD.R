@@ -14,12 +14,8 @@
 #' as.data.frame(cf)
 #' 
 #' @export
-RWD <- function(keys=NULL, ...){
-  if (!is.null(keys)){
-    anyDuplicated(.[keys]) == 0
-  } else {
-    anyDuplicated(data.frame(...)) == 0
-  }
+RWD <- function(...){
+   anyDuplicated(data.frame(...)) == 0
 }
 
 

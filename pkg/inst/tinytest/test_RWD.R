@@ -1,4 +1,5 @@
 library(validate)
+voptions(raise="all")
 
 dat <- read.csv("data/RWD.csv")
 
@@ -8,14 +9,8 @@ rules <- validator(
 
 cf <- confront(dat, rules)
 out <- as.data.frame(cf)
-expect_false(out$value)
+expect_equal(out$value,FALSE)
 
 
-all_keys <- c("TABLE", "FREQ", "TIME_PERIOD"
-  , "REPORTING", "PARTNER", "DIRECTION", "AGE", "ADJUST")
 
-rules <- validator( RWD(keys=all_keys) == TRUE)
-cf <- confront(dat, rules)
-out <- as.data.frame(cf)
-expect_false(out$value)
 
