@@ -5,8 +5,10 @@ Version: 0.1.0
 Date: 2019-07-12
 Author: Olav ten Bosch, Dick Windmeijer, Mark van der Loo
 Maintainer: Mark van der Loo <mark.vanderloo@gmail.com>
-Description: Implements the 20 most often occurring types of validation rules
-License: GPL (>= 2)
+Description: Implements convenience functions for the 20 most often occurring types of validation rules
+    within the European Statistical System.
+License: MIT + file LICENSE
+Imports: utils
 Suggests: tinytest, validate
 RoxygenNote: 6.1.1
 Encoding: UTF-8
