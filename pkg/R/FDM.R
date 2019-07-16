@@ -9,7 +9,7 @@
 #' 
 #' @references 
 #' 
-#' \href{../doc/maintypes.pdf}{Main types of validation rules for ESS data}: FDM
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDM
 #' 
 #' @export
 FDM <- function(d, mandatoryLevel=c("Mandatory","Empty")) {

@@ -2,8 +2,15 @@
 
 #' Records are without duplicate ID keys.
 #'
-#' @param keys Character vector: names columns containing dimensions
 #' @param ... Comma separated list of bare(unquoted) column names
+#'
+#' @return 
+#' For \code{RDW}: \code{TRUE} when there are no records that have duplicate
+#' values for the variables in the argument.
+#'
+#' @references 
+#' 
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RWD
 #'
 #' @examples 
 #' 
@@ -18,4 +25,13 @@ RWD <- function(...){
    anyDuplicated(data.frame(...)) == 0
 }
 
+
+#' @rdname RWD
+#' @return For \code{RWD2} a \code{logical} vector with lenght the number
+#' of records. It is \code{FALSE} for any record that is the duplicate
+#' of another record (with respect to the variables in the argument).
+RWD2 <- function(...){
+  df <- data.frame(...)
+  !( duplicated(df) | duplicated(df, fromLast=TRUE) )
+}
 

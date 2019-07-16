@@ -8,7 +8,7 @@
 #' 
 #' @references 
 #' 
-#' \href{../doc/maintypes.pdf}{Main types of validation rules for ESS data}: COV
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COV
 #' 
 #' @export
 COV <- function(d, codelistTable=NULL, codelist=NULL) {
