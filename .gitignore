@@ -36,5 +36,3 @@ vignettes/*.pdf
 rsconnect/
 doc/~$functions.xlsx
 
-# generated .Rd files
-*.Rd

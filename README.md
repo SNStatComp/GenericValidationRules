@@ -1,5 +1,9 @@
 # GenericValidationRules
-Draft implementations of generic validation rules in R-validate syntax
+
+Draft implementations of [generic ESS validation
+rules](pkg/inst/doc/20180202_maintypes.pdf) in R-validate syntax.  These are
+the 20 most commonly used data validation checks as defined by Eurostat.
+
 
 This is work in progress.
 
@@ -7,10 +11,14 @@ This is work in progress.
 
 
 #### Implemented:
-- FDL (all cases)
-- FDM (all cases)
-- COV (all cases)
 
+- COV 
+- FDL 
+- FDM 
+- FDT
+- RTS
+- RWD
+- VIR
 
 ### Todo's
 - error handling, incorrect parameters, etc.
