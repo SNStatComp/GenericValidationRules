@@ -1,11 +1,20 @@
 #' Check that the length of the data in the field is acceptable
 #'
-#' @param d Bare (unquoted) name of a variable
-#' @param x Number of code points required
+#'
+#'
+#' @param d When used in a validation rule, a bare (unquoted) name of a variable. 
+#'     Otherwise a vector of class \code{character}. Coerced to character as 
+#'     necessary.
+#' @param x Number of code points required.
 #' @param min Mimimum number of code points
 #' @param max Maximum number of code points
 #' @param minDec minimum number of decimal positions
 #' @param maxDec maximal number of decimal positions
+#'
+#' @section Details:
+#' The number of code points (string length in terms of human-readable characters)
+#' may depend on current locale settings or encoding issues including those
+#' caused by inconsistent choices of \code{UTF} normalization.
 #'
 #' @references 
 #' 

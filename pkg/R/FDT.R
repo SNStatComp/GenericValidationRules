@@ -1,7 +1,24 @@
 #' Field type
 #'
-#' @param d Bare (unquoted) name of a variable in the dataset
+#' Test whether a variable is of the required 'field type'.
+#'
+#'
+#' @param d When used in a validation rule, a bare (unquoted) name of a variable. 
+#'     Otherwise a vector of class \code{character}. Coerced to character as 
+#'     necessary.
 #' @param ft \code{[character]} Field type.
+#' @param exceptions \code{[character]} vector of acceptable values, beyond
+#'     \code{"Numeric"} or \code{"NumericWithDecimals"}.
+#' 
+#' @section Details:
+#' The sets of 'Alphabetic' and 'Alphanumeric' characters are determined by 
+#' the named ranges \code{"[:alpha:]"} respectively \code{"[:alnum:]"}. 
+#' The interpretation of these character ranges depends on the current \code{locale},
+#' see \code{\link[base]{regex}}. Numeric values are those that can be coerced
+#' to integer or are in the list of \code{exceptions}. Acceptable NumericWithDecimals
+#' are numbers that have at least a single decimal after the decimal separator
+#' '\code{.}' (it is not required to have a number before it).
+#' 
 #' 
 #' 
 #' @references 

@@ -1,7 +1,9 @@
 #' Field is Mandatory or empty
 #'
 #'
-#' @param d A character vector
+#' @param d When used in a validation rule, a bare (unquoted) name of a variable. 
+#'     Otherwise a vector of class \code{character}. Coerced to character as 
+#'     necessary.
 #' @param mandatoryLevel character scalar indicating whether a variable
 #' must be filled or must be empty. 
 #' 

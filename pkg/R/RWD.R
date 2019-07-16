@@ -2,7 +2,9 @@
 
 #' Records are without duplicate ID keys.
 #'
-#' @param ... Comma separated list of bare(unquoted) column names
+#' @param ... When used in a validation rule, a comma separated list of 
+#'     bare (unquoted) column names. Otherwise a comma separated list of
+#'     \code{character} vectors.
 #'
 #' @return For \code{RWD} a \code{logical} vector with lenght the number
 #' of records. It is \code{FALSE} for any record that is the duplicate

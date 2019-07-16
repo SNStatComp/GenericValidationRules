@@ -8,9 +8,11 @@ FDL(d, x = NULL, min = NULL, max = NULL, minDec = NULL,
   maxDec = NULL)
 }
 \arguments{
-\item{d}{Bare (unquoted) name of a variable}
+\item{d}{When used in a validation rule, a bare (unquoted) name of a variable. 
+Otherwise a vector of class \code{character}. Coerced to character as 
+necessary.}
 
-\item{x}{Number of code points required}
+\item{x}{Number of code points required.}
 
 \item{min}{Mimimum number of code points}
 
@@ -23,6 +25,13 @@ FDL(d, x = NULL, min = NULL, max = NULL, minDec = NULL,
 \description{
 Check that the length of the data in the field is acceptable
 }
+\section{Details}{
+
+The number of code points (string length in terms of human-readable characters)
+may depend on current locale settings or encoding issues including those
+caused by inconsistent choices of \code{UTF} normalization.
+}
+
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
 }

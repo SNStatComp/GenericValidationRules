@@ -1,9 +1,15 @@
 #' Check that values are within a range
 #'
-#' @param d Bare (unquoted) name of a variable
+#' @param d When used in a validation rule, a bare (unquoted) name of a variable. 
+#'     Otherwise a vector of class \code{character}. Coerced to character as 
+#'     necessary.
 #'
 #' @return A \code{logical} with the length of \code{d}.
 #'
+#' @references 
+#' 
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VIR
+#' 
 #' @export
 VIR <- function(d, Min=NULL, Max=NULL){
 
