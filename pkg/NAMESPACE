@@ -3,4 +3,7 @@
 export(COV)
 export(FDL)
 export(FDM)
+export(FDT)
 export(RWD)
+export(RWD2)
+importFrom(utils,read.csv)

@@ -1,3 +1,6 @@
+#' @importFrom utils read.csv
+{}
+
 
 #' COV: Codes are Valid
 #'
@@ -15,7 +18,7 @@ COV <- function(d, codelistTable=NULL, codelist=NULL) {
   d <- as.character(d) 
   if (!is.null(codelistTable)) {
     # Case 1: read code list from  file:
-    cl <- read.csv(codelistTable,colClasses=c(Codes="character"))
+    cl <- utils::read.csv(codelistTable,colClasses=c(Codes="character"))
     res <- d %in% cl$Codes
   }
   
