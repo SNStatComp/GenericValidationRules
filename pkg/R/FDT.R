@@ -15,8 +15,8 @@ FDT <- function(d
   ft <- match.arg(ft)
   d <- as.character(d)
   switch(ft
-    , "Alphabetic"   = grepl("^[[:alpha:]]*$", as.character(d) | is.na(d)
-    , "Alphanumeric" = grepl("^[[:alnum:]]*$", as.character(d)) | is.na(d))
+    , "Alphabetic"   = grepl("^[[:alpha:]]*$", as.character(d)) | is.na(d)
+    , "Alphanumeric" = grepl("^[[:alnum:]]*$", as.character(d)) | is.na(d)
     , "Numeric"      = d %in% exceptions | !is.na(suppressWarnings(as.integer(d)))
     , "NumericWithDecimals" = d %in% exceptions | grepl("^[0-9]*\\.[0-9]+$",d)
   )
