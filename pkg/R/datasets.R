@@ -45,6 +45,10 @@
 #' @rdname COVdat
 {}
 
+#' @name COC5dat
+#' @rdname COVdat
+{}
+
 
 #' @name FDMdat
 #' @rdname COVdat

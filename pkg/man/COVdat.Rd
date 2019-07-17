@@ -7,6 +7,7 @@
 \alias{COC2dat}
 \alias{COC3dat}
 \alias{COC4dat}
+\alias{COC5dat}
 \alias{FDMdat}
 \alias{REPdat}
 \alias{RNRdat}
