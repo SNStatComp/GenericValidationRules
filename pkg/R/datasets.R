@@ -10,6 +10,10 @@
 #'
 #' \itemize{
 #'    \item{\code{COVdat}}
+#'    \item{\code{COCdat}}
+#'    \item{\code{COC2dat}}
+#'    \item{\code{COC3dat}}
+#'    \item{\code{COC4dat}}
 #'    \item{\code{FDMdat}}
 #'    \item{\code{REPdat}}
 #'    \item{\code{RNRdat}}
