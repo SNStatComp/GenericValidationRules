@@ -14,6 +14,7 @@
 #'    \item{\code{COC2dat}}
 #'    \item{\code{COC3dat}}
 #'    \item{\code{COC4dat}}
+#'    \item{\code{COC5dat}}
 #'    \item{\code{FDMdat}}
 #'    \item{\code{REPdat}}
 #'    \item{\code{RNRdat}}
@@ -23,6 +24,7 @@
 #'    \item{\code{RETdat}}
 #'    \item{\code{RTSdat}}
 #'    \item{\code{VIRdat}}
+#'    \item{\code{VCOdat}}
 #'}
 #' @docType data
 #' @format csv files.
@@ -83,5 +85,9 @@
 {}
 
 #' @name RETdat
+#' @rdname COVdat
+{}
+
+#' @name VCOdat
 #' @rdname COVdat
 {}

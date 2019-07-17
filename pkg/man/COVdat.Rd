@@ -17,6 +17,7 @@
 \alias{RTSdat}
 \alias{VIRdat}
 \alias{RETdat}
+\alias{VCOdat}
 \title{Example data sets from the Eurostat Generic Validation Rules}
 \format{csv files.}
 \description{
@@ -32,6 +33,7 @@ datasets are available:
    \item{\code{COC2dat}}
    \item{\code{COC3dat}}
    \item{\code{COC4dat}}
+   \item{\code{COC5dat}}
    \item{\code{FDMdat}}
    \item{\code{REPdat}}
    \item{\code{RNRdat}}
@@ -41,5 +43,6 @@ datasets are available:
    \item{\code{RETdat}}
    \item{\code{RTSdat}}
    \item{\code{VIRdat}}
+   \item{\code{VCOdat}}
 }
 }

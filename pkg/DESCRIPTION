@@ -9,7 +9,7 @@ Description: Implements convenience functions for the 20 most often occurring ty
     within the European Statistical System.
 License: MIT + file LICENSE
 Lazydata: no
-Imports: utils
+Imports: utils, stats
 Suggests: tinytest, validate
 RoxygenNote: 6.1.1
 Encoding: UTF-8
