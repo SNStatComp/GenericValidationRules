@@ -4,6 +4,13 @@
 #'     Otherwise a vector of class \code{character}. Coerced to character as 
 #'     necessary.
 #'
+#' @param Min smallest allowed value
+#' @param Max largest allowed value
+#'
+#'
+#'
+#'
+#'
 #' @return A \code{logical} with the length of \code{d}.
 #'
 #' @references 

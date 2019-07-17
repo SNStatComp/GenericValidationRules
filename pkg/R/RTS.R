@@ -47,9 +47,9 @@ is_gapless <- function(x){
 #' the variable indicating the time period must be both gapless and within bounds.
 #' 
 #'
-#' @param d When used in a validation rule, a bare (unquoted) name of a variable
-#'     (e.g. \code{TIME_PERIOD}). Otherwise a vector of class \code{character}.
-#'     Coerced to character as necessary.
+#' @param timevar When used in a validation rule, a bare (unquoted) name of the variable
+#'     representing a time period (e.g. \code{TIME_PERIOD}). Otherwise a vector of class 
+#'     \code{character}. Coerced to character as necessary.
 #' @param ftp First time period in one of the supported notations (see Details)
 #' @param ltp Last time period in one of the supported notations (see Details)
 #' @param ... Comma-separated list of bare (unquoted) dimensions. Time series must
