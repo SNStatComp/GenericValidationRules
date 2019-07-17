@@ -16,7 +16,7 @@
 #'
 #' @references 
 #' 
-#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COC
 #'
 #' @examples
 #' # First example: consistency of TABLE and FREW
