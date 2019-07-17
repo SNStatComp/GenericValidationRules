@@ -8,7 +8,7 @@ dat <- read.csv('data/COV.csv')
 rule <- validator(COV(DIRECTION, codelistTable="data/COV_CL_DIRECTION.csv") == TRUE)
 cf <- confront(dat, rule)
 summary(cf)
-expect_silent(out <- as.data.frame(cf))
+out <- as.data.frame(cf)
 
 expect_equal(out$value, c(TRUE,FALSE, TRUE, TRUE))
 

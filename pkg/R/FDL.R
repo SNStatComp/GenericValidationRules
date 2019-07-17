@@ -12,6 +12,7 @@
 #' @param maxDec maximal number of decimal positions
 #'
 #' @section Details:
+#'
 #' The number of code points (string length in terms of human-readable characters)
 #' may depend on current locale settings or encoding issues including those
 #' caused by inconsistent choices of \code{UTF} normalization.
