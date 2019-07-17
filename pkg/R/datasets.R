@@ -24,6 +24,24 @@
 #' @format csv files.
 {}
 
+
+#' @name COCdat
+#' @rdname COVdat
+{}
+
+#' @name COC2dat
+#' @rdname COVdat
+{}
+
+#' @name COC3dat
+#' @rdname COVdat
+{}
+
+#' @name COC4dat
+#' @rdname COVdat
+{}
+
+
 #' @name FDMdat
 #' @rdname COVdat
 {}
