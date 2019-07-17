@@ -10,6 +10,10 @@ VIR(d, Min = NULL, Max = NULL)
 \item{d}{When used in a validation rule, a bare (unquoted) name of a variable. 
 Otherwise a vector of class \code{character}. Coerced to character as 
 necessary.}
+
+\item{Min}{smallest allowed value}
+
+\item{Max}{largest allowed value}
 }
 \value{
 A \code{logical} with the length of \code{d}.

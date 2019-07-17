@@ -7,6 +7,10 @@
 RTS(timevar, ftp, ltp, ...)
 }
 \arguments{
+\item{timevar}{When used in a validation rule, a bare (unquoted) name of the variable
+representing a time period (e.g. \code{TIME_PERIOD}). Otherwise a vector of class 
+\code{character}. Coerced to character as necessary.}
+
 \item{ftp}{First time period in one of the supported notations (see Details)}
 
 \item{ltp}{Last time period in one of the supported notations (see Details)}
@@ -14,10 +18,6 @@ RTS(timevar, ftp, ltp, ...)
 \item{...}{Comma-separated list of bare (unquoted) dimensions. Time series must
 be gapless from \code{ftp} to \code{ltp} for each combination of values in these
 dimensions.}
-
-\item{d}{When used in a validation rule, a bare (unquoted) name of a variable
-(e.g. \code{TIME_PERIOD}). Otherwise a vector of class \code{character}.
-Coerced to character as necessary.}
 }
 \description{
 A record set is split by a set of \emph{dimensions}. For each split,
