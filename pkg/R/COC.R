@@ -42,7 +42,7 @@
 #' # as a single-row data frame
 #' data(COC3dat)
 #' rules <- validator(REPORTING == envelope$Country)
-#' env <- data.frame(Country="EL")
+#' env <- data.frame(Country="EL", stringsAsFactors=FALSE)
 #' result <- confront(COC3dat, rules, ref=list(envelope=env))
 #' summary(result)
 #' values(result)
@@ -50,7 +50,9 @@
 #' 
 #' # Fourth example: REPORTING country and PARTNER country cannot be the same
 #' data(COC4dat)
-#' rules <- validator(REPORTING != PARTNER)
+#' # we convert to character as in the original data, these variables are
+#' # different types of 'factor' (categorical) variables.
+#' rules <- validator(as.character(REPORTING) != as.character(PARTNER) )
 #' result <- confront(COC3dat, rules)
 #' summary(result)
 #' values(result)
