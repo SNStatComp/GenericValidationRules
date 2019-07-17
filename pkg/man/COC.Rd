@@ -53,3 +53,6 @@ summary(result)
 values(result)
 as.data.frame(result)
 }
+\references{
+\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
+}

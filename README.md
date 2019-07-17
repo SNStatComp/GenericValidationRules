@@ -19,6 +19,7 @@ This is work in progress.
 - RTS
 - RNR
 - RWD
+- COC
 - VIR
 
 ### Todo's

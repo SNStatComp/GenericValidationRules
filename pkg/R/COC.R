@@ -13,6 +13,11 @@
 #' much easier to express this rule type directly in \pkg{validate} syntax as shown
 #' in the examples below.
 #'
+#'
+#' @references 
+#' 
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
+#'
 #' @examples
 #' # First example: consistency of TABLE and FREW
 #' library(validate)
