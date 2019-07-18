@@ -12,7 +12,7 @@
 #' 
 #' @section Details:
 #' The sets of 'Alphabetic' and 'Alphanumeric' characters are determined by 
-#' the named ranges \code{"[:alpha:]"} respectively \code{"[:alnum:]"}. 
+#' the POSIX named ranges \code{"[:alpha:]"} respectively \code{"[:alnum:]"}. 
 #' The interpretation of these character ranges depends on the current \code{locale},
 #' see \code{\link[base]{regex}}. Numeric values are those that can be coerced
 #' to integer or are in the list of \code{exceptions}. Acceptable NumericWithDecimals
@@ -22,8 +22,28 @@
 #' 
 #' 
 #' @references 
-#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDT
+#' \itemize{
+#'  \item{\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDT}
+#'  \item{ \href{https://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html}{
+#'      POSIX regular expressions}. The Open Group base specifications Issue 6.}
+#' }
+#'
+#'
+#' @examples
+#' data(FDTdat)
 #' 
+#' # Using FDT with 'validate'
+#' library(validate)
+#' rules <- validator(FDT(OBS_VALUE, ft="Numeric", exceptions="NA")==TRUE)
+#' cf <- confront(FDTdat, rules)
+#' summary(cf)
+#' as.data.frame(cf)
+#'
+#' # Using FDT directly
+#' FDT(FDTdat$OBS_VALUE, ft="Numeric", exceptions="NA")
+#'
+#'
+#'
 #' @export
 FDT <- function(d
   , ft = c("Alphabetic","Alphanumeric","Numeric","NumericWithDecimals")

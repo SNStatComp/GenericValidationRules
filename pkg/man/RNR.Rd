@@ -46,7 +46,7 @@ as.data.frame(cf)
 # Using RNR directly
 RNR(RNRdat, Min=4)
 
-# Using RNR with 'validate' (NOTE: data=.)
+# Using RNR with 'validate' (NOTE: data= . )
 rule <- validator(RNR(data=., Min=4) == TRUE)
 cf <- confront(RNRdat, rule)
 out <- as.data.frame(cf)
