@@ -19,18 +19,19 @@
 #' 
 #' @examples
 #' data(VIRdat)
-#' # Using VIR directly
-#' VIR(VIRdat$OBS_VALUE, Min = 1)
-#' 
-#' # Using VIR in a validation rule
 #' library(validate)
-#' rules <- validator(VIR(OBS_VALUE, Min=1) == TRUE)
+#' # Using 'validate' directly:
+#' rules <- validator(OBS_VALUE >= 1)
 #' cf <- confront(VIRdat, rules)
 #' summary(cf)
 #' as.data.frame(cf)
 #' 
-#' # Using 'validate' directly
-#' rules <- validator(OBS_VALUE >= 1)
+#' # Using VIR directly
+#' VIR(VIRdat$OBS_VALUE, Min = 1)
+#' 
+#' # Using VIR in a validation rule
+#' 
+#' rules <- validator(VIR(OBS_VALUE, Min=1) == TRUE)
 #' cf <- confront(VIRdat, rules)
 #' summary(cf)
 #' as.data.frame(cf)
