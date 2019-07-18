@@ -18,6 +18,24 @@
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COV
 #' 
+#' 
+#' @examples
+#' data(COVdat)
+#' 
+#' # Using COV with 'validate'
+#' library(validate)
+#' rule <- validator(COV(DIRECTION, codelist=c("IN", "OUT")) == TRUE)
+#' cf <- confront(COVdat, rule)
+#' summary(cf)
+#' as.data.frame(cf)
+#'
+#' # Using COV directly
+#' COV(COVdat$DIRECTION, codelist=c("IN", "OUT"))
+#' 
+#' # Using 'validate' directly
+#' rule <- validator( DIRECTION %in% c("IN", "OUT") )
+#'
+#'
 #' @export
 COV <- function(d, codelistTable=NULL, codelist=NULL) {
   d <- as.character(d) 
