@@ -33,10 +33,10 @@
 #'  , idvars = c("TABLE","FREQ", "TIME_PERIOD","REPORTING","PARTNER","DIRECTION")
 #'  , rule = OBS_VALUE.Y0_18/OBS_VALUE.TOTAL<0.5)
 #'
-#' # Example using VCO in a validation rule with the 'validate' package.
+#' # Example using VCO in a validation rule with the 'validate' package (NOTE: data = . )
 #' library(validate)
 #' rules <- validator(
-#'   VCO(VCOdat, pivot = "AGE"
+#'   VCO( data = . , pivot = "AGE"
 #'    , idvars = c("TABLE","FREQ", "TIME_PERIOD","REPORTING","PARTNER","DIRECTION")
 #'    , rule = OBS_VALUE.Y0_18/OBS_VALUE.TOTAL<0.5) == TRUE)
 #' cf <- confront(VCOdat, rules)
