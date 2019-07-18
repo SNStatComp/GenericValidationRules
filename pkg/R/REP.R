@@ -1,7 +1,12 @@
 
 
 #' Records expected are provided.
-#' 
+#'
+#' @param coverage character scalar indicating the type of coverage:
+#' - Min: The combinations represent the minimum coverage of the records to be provided (More combinations are acceptable)
+#' - Max: The combinations represent the maximum coverage of the records to be provided (Less  combinations are acceptable)
+#' - Only: The combinations are represented in all the records to be provided (not less, not more combinations can be accepted)
+#' - Excl: The combinations should not be provided in records
 #' @param ... When used in a validation rule, a comma separated list of 
 #'     bare (unquoted) column names. Otherwise a comma separated list of
 #'     \code{character} vectors.
