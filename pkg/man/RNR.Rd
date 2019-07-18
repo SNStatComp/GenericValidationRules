@@ -28,6 +28,31 @@ For \code{RNR2}, \code{TRUE} or \code{FALSE}.
 Check that the number of records in a file is higher or equal to a minimum 
 and (optionally) is lower or equal to a maximum.
 }
+\note{
+These checks can easily be performed directly with \pkg{validate} directly (see examples).
+\code{RNR} and \code{RNR2} are provided for consistency.
+}
+\examples{
+data(RNRdat)
+
+# Using 'validate' directly
+library(validate)
+rules <- validator( nrow(.) >= 4 )
+cf <- confront(RNRdat, rules)
+summary(cf)
+as.data.frame(cf)
+
+
+# Using RNR directly
+RNR(RNRdat, Min=4)
+
+# Using RNR with 'validate' (NOTE: data=.)
+rule <- validator(RNR(data=., Min=4) == TRUE)
+cf <- confront(RNRdat, rule)
+out <- as.data.frame(cf)
+
+
+}
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RNR
 }
