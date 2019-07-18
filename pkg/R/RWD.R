@@ -14,12 +14,19 @@
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RWD
 #'
 #' @examples 
-#' 
+#' data(RWDdat)
 #' library(validate)
-#' rules <- validator(RWD(height,weight)==TRUE)
-#' cf <- confront(women, rules)
+#' # Using RWD with 'validate'
+#' rules <- validator( 
+#'   RWD(TABLE, FREQ, TIME_PERIOD, REPORTING, PARTNER, DIRECTION, AGE, ADJUST) == TRUE )
+#' cf <- confront(RWDdat, rules)
 #' summary(cf)
 #' as.data.frame(cf)
+#' 
+#' # Using RWD directly
+#' 
+#' RWD(RWDdat$TABLE, RWDdat$FREQ, RWDdat$TIME_PERIOD, RWDdat$REPORTING
+#'   , RWDdat$PARTNER, RWDdat$DIRECTION, RWDdat$AGE, RWDdat$ADJUST)
 #' 
 #' @export
 RWD <- function(...){
