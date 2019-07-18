@@ -21,6 +21,39 @@
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
 #' 
+#' @examples
+#' data(FDLdat)
+#'
+#' # Using 'validate' directly
+#' library(validate)
+#' ## Minimum nr of characters
+#' rule <- validator( nchar(PARTNER) >= 2 )
+#' cf <- confront(FDLdat, rule)
+#' summary(cf)
+#' as.data.frame(cf)
+#'
+#'
+#' ## Minimum and Maximum
+#' rule <- validator( nchar(PARTNER) >= 2, nchar(PARTNER) <= 4 )
+#' cf <- confront(FDLdat, rule)
+#' summary(cf)
+#' as.data.frame(cf)
+#'
+#' # Using FDL with 'validate'
+#' rule <- validator(FDL(PARTNER, x=2) == TRUE)
+#' cf <- confront(FDLdat, rule)
+#' summary(cf)
+#' as.data.frame(cf)
+#'
+#' rule <- validator(FDL(PARTNER, min=2, max=4) == TRUE)
+#' cf <- confront(FDLdat, rule)
+#' summary(cf)
+#' as.data.frame(cf)
+#'
+#' # Using FDL directly
+#' FDL(FDLdat$PARTNER, x=2)
+#' FDL(FDLdat$PARTNER, min=2, max=4)
+#'
 #'
 #'
 #'

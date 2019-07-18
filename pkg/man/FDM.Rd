@@ -44,7 +44,6 @@ cf <- confront(FDMdat, rule)
 summary(cf)
 as.data.frame(cf)
 
-
 # Example using FDM directly
 FDM(FDMdat$OBS_STATUS, mandatoryLevel="Mandatory")
 FDM(FDMdat$OBS_STATUS, mandatoryLevel="Empty")
