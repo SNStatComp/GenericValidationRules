@@ -9,6 +9,9 @@
 #' @return For \code{RWD} a \code{logical} vector with lenght the number
 #' of records. It is \code{FALSE} for any record that is the duplicate
 #' of another record (with respect to the variables in the argument).
+#'
+#'
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RWD

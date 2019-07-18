@@ -44,3 +44,10 @@ RWD(RWDdat$TABLE, RWDdat$FREQ, RWDdat$TIME_PERIOD, RWDdat$REPORTING
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RWD
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{FDT}}, \code{\link{RNR}}, \code{\link{RTS}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

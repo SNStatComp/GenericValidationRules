@@ -53,3 +53,10 @@ FDM(FDMdat$OBS_STATUS, mandatoryLevel="Empty")
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDM
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDT}},
+  \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

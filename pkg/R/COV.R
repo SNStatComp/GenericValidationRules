@@ -14,6 +14,7 @@
 #'     rule, this must be a literal character vector (i.e. not a variable defined
 #'     elswhere in your script).
 #' 
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COV

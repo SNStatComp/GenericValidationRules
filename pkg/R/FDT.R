@@ -21,6 +21,7 @@
 #' 
 #' 
 #' 
+#' @family validation-functions
 #' @references 
 #' \itemize{
 #'  \item{\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDT}

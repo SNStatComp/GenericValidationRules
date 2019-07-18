@@ -58,3 +58,10 @@ as.data.frame(result)
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COC
 }
+\seealso{
+Other validation-functions: \code{\link{COV}},
+  \code{\link{FDL}}, \code{\link{FDM}}, \code{\link{FDT}},
+  \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

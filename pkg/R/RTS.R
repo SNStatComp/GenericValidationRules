@@ -66,6 +66,7 @@ is_gapless <- function(x){
 #' }
 #'
 #'
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RTS

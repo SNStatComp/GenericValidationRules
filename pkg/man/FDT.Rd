@@ -54,3 +54,10 @@ FDT(FDTdat$OBS_VALUE, ft="Numeric", exceptions="NA")
      POSIX regular expressions}. The Open Group base specifications Issue 6.}
 }
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

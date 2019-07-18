@@ -51,3 +51,10 @@ as.data.frame(cf)
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VIR
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{FDT}}, \code{\link{RNR}}, \code{\link{RTS}},
+  \code{\link{RWD}}, \code{\link{VCO}}
+}
+\concept{validation-functions}

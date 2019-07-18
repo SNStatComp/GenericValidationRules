@@ -42,3 +42,10 @@ rule <- validator( DIRECTION \%in\% c("IN", "OUT") )
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COV
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{FDL}}, \code{\link{FDM}}, \code{\link{FDT}},
+  \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

@@ -17,6 +17,7 @@
 #' may depend on current locale settings or encoding issues including those
 #' caused by inconsistent choices of \code{UTF} normalization.
 #'
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
