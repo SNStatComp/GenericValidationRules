@@ -21,6 +21,7 @@
 \alias{VCOdat}
 \alias{VADdat}
 \alias{HT_AGE_GROUPSdat}
+\alias{VSAdat}
 \title{Example data sets from the Eurostat Generic Validation Rules}
 \format{csv files.}
 \description{
@@ -51,5 +52,6 @@ datasets are available:
    \item{\code{VCOdat}}
    \item{\code{VADdat}}
    \item{\code{HT_AGE_GROUPSdat}}
+   \item{\code{VSAdat}}
 }
 }

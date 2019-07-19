@@ -23,6 +23,7 @@ the 20 most commonly used data validation checks as defined by Eurostat.
 - VIR
 - VCO
 - VAD
+- VSA
 
 ### Todo's
 - error handling, incorrect parameters, etc.

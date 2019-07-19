@@ -29,6 +29,7 @@
 #'    \item{\code{VCOdat}}
 #'    \item{\code{VADdat}}
 #'    \item{\code{HT_AGE_GROUPSdat}}
+#'    \item{\code{VSAdat}}
 #'}
 #' @docType data
 #' @format csv files.
@@ -108,5 +109,9 @@
 {}
 
 #' @name HT_AGE_GROUPSdat
+#' @rdname COVdat
+{}
+
+#' @name VSAdat
 #' @rdname COVdat
 {}
