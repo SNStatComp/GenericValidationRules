@@ -23,7 +23,7 @@ Test whether a variable is of the required 'field type'.
 \section{Details}{
 
 The sets of 'Alphabetic' and 'Alphanumeric' characters are determined by 
-the named ranges \code{"[:alpha:]"} respectively \code{"[:alnum:]"}. 
+the POSIX named ranges \code{"[:alpha:]"} respectively \code{"[:alnum:]"}. 
 The interpretation of these character ranges depends on the current \code{locale},
 see \code{\link[base]{regex}}. Numeric values are those that can be coerced
 to integer or are in the list of \code{exceptions}. Acceptable NumericWithDecimals
@@ -31,6 +31,33 @@ are numbers that have at least a single decimal after the decimal separator
 '\code{.}' (it is not required to have a number before it).
 }
 
-\references{
-\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDT
+\examples{
+data(FDTdat)
+
+# Using FDT with 'validate'
+library(validate)
+rules <- validator(FDT(OBS_VALUE, ft="Numeric", exceptions="NA")==TRUE)
+cf <- confront(FDTdat, rules)
+summary(cf)
+as.data.frame(cf)
+
+# Using FDT directly
+FDT(FDTdat$OBS_VALUE, ft="Numeric", exceptions="NA")
+
+
+
 }
+\references{
+\itemize{
+ \item{\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDT}
+ \item{ \href{https://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap09.html}{
+     POSIX regular expressions}. The Open Group base specifications Issue 6.}
+}
+}
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

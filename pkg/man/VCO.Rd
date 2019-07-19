@@ -15,9 +15,9 @@ a data frame.}
 
 \item{idvars}{Identifying variables: these variables stay in rows after pivoting. All variables
 that are not pivot or identifying are considered observations. A variable named \code{OBS}
-will be split over columns \code{OBS.VAL1}, \code{OBS.VAL2}, \eqn{\ldots}. When used in
-a validation rule, this must be a literal character. That is, its value can not be
-a variable defined earlier in the script.}
+will be split over columns \code{OBS.VAL1}, \code{OBS.VAL2}, \eqn{\ldots}. When \code{VCO} is used in
+a validation rule with \pkg{validate}, \code{idvars} must be a literal character vector. 
+That is, its value can not be a variable defined earlier in the script.}
 
 \item{rule}{A bare expression in terms of the \code{OBS.VARi} variables.}
 }
@@ -27,12 +27,29 @@ after pivoting, transform the results to the unpivoted table.
 }
 \examples{
 data(VCOdat)
+# Example using VCO directly on a data set.
+VCO(VCOdat, pivot = "AGE"
+ , idvars = c("TABLE","FREQ", "TIME_PERIOD","REPORTING","PARTNER","DIRECTION")
+ , rule = OBS_VALUE.Y0_18/OBS_VALUE.TOTAL<0.5)
 
-VCO(VCOdat, pivot="AGE"
- , idvars=c("TABLE","FREQ", "TIME_PERIOD","REPORTING","PARTNER","DIRECTION")
- , rule=OBS_VALUE.Y0_18/OBS_VALUE.TOTAL<0.5) 
+# Example using VCO in a validation rule with the 'validate' package (NOTE: data = . )
+library(validate)
+rules <- validator(
+  VCO( data = . , pivot = "AGE"
+   , idvars = c("TABLE","FREQ", "TIME_PERIOD","REPORTING","PARTNER","DIRECTION")
+   , rule = OBS_VALUE.Y0_18/OBS_VALUE.TOTAL<0.5) == TRUE)
+cf <- confront(VCOdat, rules)
+summary(cf)
+as.data.frame(cf)
 
 }
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VCO
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{FDT}}, \code{\link{RNR}}, \code{\link{RTS}},
+  \code{\link{RWD}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

@@ -1,14 +1,15 @@
 Package: GenericValidationRules
 Type: Package
-Title: Eurostat Generic Validation RUles
+Title: Generic Validation Rules for the European Statistical System
 Version: 0.1.0
 Date: 2019-07-12
 Author: Olav ten Bosch, Dick Windmeijer, Mark van der Loo
 Maintainer: Mark van der Loo <mark.vanderloo@gmail.com>
-Description: Implements convenience functions for the 20 most often occurring types of validation rules
-    within the European Statistical System.
+Description: Implements convenience functions for the 20 most often occurring types of data 
+    validation rules within the European Statistical System. This package can be used standalone 
+    but it also integrates with the 'validate' package.
 License: MIT + file LICENSE
-Lazydata: no
+LazyData: no
 Imports: utils, stats
 Suggests: tinytest, validate
 RoxygenNote: 6.1.1

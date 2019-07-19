@@ -21,6 +21,40 @@ A \code{logical} with the length of \code{d}.
 \description{
 Check that values are within a range
 }
+\note{
+Checking ranges can be doen with \code{VIR} but is even easier to do directly
+with \pkg{validate}. See the examples.
+}
+\examples{
+data(VIRdat)
+library(validate)
+# Using 'validate' directly:
+rules <- validator(OBS_VALUE >= 1)
+cf <- confront(VIRdat, rules)
+summary(cf)
+as.data.frame(cf)
+
+# Using VIR directly
+VIR(VIRdat$OBS_VALUE, Min = 1)
+
+# Using VIR in a validation rule
+
+rules <- validator(VIR(OBS_VALUE, Min=1) == TRUE)
+cf <- confront(VIRdat, rules)
+summary(cf)
+as.data.frame(cf)
+
+
+
+
+}
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VIR
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{FDT}}, \code{\link{RNR}}, \code{\link{RTS}},
+  \code{\link{RWD}}, \code{\link{VCO}}
+}
+\concept{validation-functions}

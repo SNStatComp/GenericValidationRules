@@ -5,18 +5,18 @@
 \alias{RNR2}
 \title{Check number of records.}
 \usage{
-RNR(data, Min = 1, Max = NULL)
+RNR(data, min = 1, max = NULL)
 
-RNR2(data, Min = 1, Max = NULL)
+RNR2(data, min = 1, max = NULL)
 }
 \arguments{
 \item{data}{A bare (unquoted) '\code{.}' when used in a validation rule, otherwise
 a data frame.}
 
-\item{Min}{nonnegative integer}
+\item{min}{nonnegative integer}
 
-\item{Max}{nonnegative integer, not smaller then \code{Min}, or \code{NULL}. If
-\code{Max} is set to \code{NULL}, only the minimum number of records is checked.}
+\item{max}{nonnegative integer, not smaller then \code{min}, or \code{NULL}. If
+\code{max} is set to \code{NULL}, only the minimum number of records is checked.}
 }
 \value{
 For \code{RNR} A \code{logical} vector of length \code{nrow(data)}. All \code{FALSE} when
@@ -28,6 +28,38 @@ For \code{RNR2}, \code{TRUE} or \code{FALSE}.
 Check that the number of records in a file is higher or equal to a minimum 
 and (optionally) is lower or equal to a maximum.
 }
+\note{
+These checks can easily be performed directly with \pkg{validate} directly (see examples).
+\code{RNR} and \code{RNR2} are provided for consistency.
+}
+\examples{
+data(RNRdat)
+
+# Using 'validate' directly
+library(validate)
+rules <- validator( nrow(.) >= 4 )
+cf <- confront(RNRdat, rules)
+summary(cf)
+as.data.frame(cf)
+
+
+# Using RNR directly
+RNR(RNRdat, min=4)
+
+# Using RNR with 'validate' (NOTE: data= . )
+rule <- validator(RNR(data=., min=4) == TRUE)
+cf <- confront(RNRdat, rule)
+out <- as.data.frame(cf)
+
+
+}
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RNR
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
+  \code{\link{FDT}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}

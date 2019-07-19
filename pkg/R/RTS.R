@@ -66,10 +66,34 @@ is_gapless <- function(x){
 #' }
 #'
 #'
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RTS
 #'
+#' @examples
+#' data(RTSdat)
+#' 
+#' # Example using RTS with 'validate'
+#' library(validate)
+#' rules <- validator(
+#'  RTS(TIME_PERIOD, ftp = "2008", ltp = "2010"
+#'    , TABLE, FREQ, REPORTING, PARTNER, DIRECTION, AGE, ADJUST) == TRUE
+#' )
+#' cf <- confront(RTSdat, rules)
+#' summary(cf)
+#' out <- as.data.frame(cf)
+#'
+#' # Example using RTS directly
+#' RTS(RTSdat$TIME_PERIOD, ftp = "2008", ltp = "2010"
+#'   , RTSdat$TABLE, RTSdat$FREQ, RTSdat$REPORTING
+#'   , RTSdat$PARTNER, RTSdat$DIRECTION, RTSdat$AGE, RTSdat$ADJUST) 
+#' 
+#' # Or, using the 'with' function from base R
+#' with(RTSdat
+#'    , RTS( TIME_PERIOD, ftp = "2008", ltp = "2010"
+#'         , TABLE, FREQ, REPORTING, PARTNER, DIRECTION, AGE, ADJUST)
+#' )
 #'
 #' @export
 RTS <- function(timevar, ftp, ltp, ...){

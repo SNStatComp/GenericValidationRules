@@ -10,10 +10,10 @@
 #'
 #' @section Note:
 #' The interface proposed in the original document contains redundancies, and it is 
-#' much easier to express this rule type directly in \pkg{validate} syntax as shown
+#' easier to express this rule type directly in \pkg{validate} syntax as shown
 #' in the examples below.
 #'
-#'
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: COC

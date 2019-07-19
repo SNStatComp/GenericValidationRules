@@ -33,6 +33,50 @@ may depend on current locale settings or encoding issues including those
 caused by inconsistent choices of \code{UTF} normalization.
 }
 
+\examples{
+data(FDLdat)
+
+# Using 'validate' directly
+library(validate)
+## Minimum nr of characters
+rule <- validator( nchar(PARTNER) >= 2 )
+cf <- confront(FDLdat, rule)
+summary(cf)
+as.data.frame(cf)
+
+
+## Minimum and Maximum
+rule <- validator( nchar(PARTNER) >= 2, nchar(PARTNER) <= 4 )
+cf <- confront(FDLdat, rule)
+summary(cf)
+as.data.frame(cf)
+
+# Using FDL with 'validate'
+rule <- validator(FDL(PARTNER, x=2) == TRUE)
+cf <- confront(FDLdat, rule)
+summary(cf)
+as.data.frame(cf)
+
+rule <- validator(FDL(PARTNER, min=2, max=4) == TRUE)
+cf <- confront(FDLdat, rule)
+summary(cf)
+as.data.frame(cf)
+
+# Using FDL directly
+FDL(FDLdat$PARTNER, x=2)
+FDL(FDLdat$PARTNER, min=2, max=4)
+
+
+
+
+}
 \references{
 \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
 }
+\seealso{
+Other validation-functions: \code{\link{COC}},
+  \code{\link{COV}}, \code{\link{FDM}}, \code{\link{FDT}},
+  \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
+  \code{\link{VCO}}, \code{\link{VIR}}
+}
+\concept{validation-functions}
