@@ -1,11 +1,10 @@
 # GenericValidationRules
 
-Draft implementations of [generic ESS validation
+Implementations of [generic ESS validation
 rules](pkg/inst/doc/20180202_maintypes.pdf) in R-validate syntax.  These are
 the 20 most commonly used data validation checks as defined by Eurostat.
 
 
-This is work in progress.
 
 
 
