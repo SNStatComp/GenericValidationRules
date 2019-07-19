@@ -11,12 +11,13 @@ VAD_equal <- function(x, field, aggregate_code, ref, tolerance) {
 #' 
 #' Check that values for aggregates are consistent with the sum of values for detailed data.
 #' 
-#' @param data a data frame.
+#' @param data a data frame when called directly. When used in a validation rule, \code{data=.} to
+#'   reference the data set passed to \code{\link[validate]{confront}}.
 #' @param field a character scalar containing the codes to be used for this check.
 #' @param aggregate_code a charactar scalar containing the code for the aggregate.
 #' @param operator a charactar scalar containing a relational Operator between aggregates and the sum of detailed data
 #' @param tolerance (acceptable margin) expressed in a absolute number
-#' @param ref When called directly, a data frame. When used in a validation rule, the name of the 
+#' @param refdata When called directly, a data frame. When used in a validation rule, the name of the 
 #'    reference variable passed to \code{confront}.
 #' @return A \code{logical} vector with length the number of records. Each element of this vector contains the result of the check
 #' @references 
