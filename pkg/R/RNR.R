@@ -6,9 +6,9 @@
 #'
 #' @param data A bare (unquoted) '\code{.}' when used in a validation rule, otherwise
 #'     a data frame.
-#' @param Min nonnegative integer
-#' @param Max nonnegative integer, not smaller then \code{Min}, or \code{NULL}. If
-#'   \code{Max} is set to \code{NULL}, only the minimum number of records is checked.
+#' @param min nonnegative integer
+#' @param max nonnegative integer, not smaller then \code{min}, or \code{NULL}. If
+#'   \code{max} is set to \code{NULL}, only the minimum number of records is checked.
 #'
 #' @note
 #' These checks can easily be performed directly with \pkg{validate} directly (see examples).
@@ -35,28 +35,28 @@
 #'
 #'
 #' # Using RNR directly
-#' RNR(RNRdat, Min=4)
+#' RNR(RNRdat, min=4)
 #' 
 #' # Using RNR with 'validate' (NOTE: data= . )
-#' rule <- validator(RNR(data=., Min=4) == TRUE)
+#' rule <- validator(RNR(data=., min=4) == TRUE)
 #' cf <- confront(RNRdat, rule)
 #' out <- as.data.frame(cf)
 #'
 #'
 #' @export
-RNR <- function(data, Min=1, Max=NULL){
+RNR <- function(data, min=1, max=NULL){
   n <- nrow(data)
-  res <- n >= Min
-  if (!is.null(Max)) res <- res & n <= Max
+  res <- n >= min
+  if (!is.null(max)) res <- res & n <= max
   rep(res,n)
 }
 
 #' @rdname RNR
 #' @export
 #' @return For \code{RNR2}, \code{TRUE} or \code{FALSE}.
-RNR2 <- function(data, Min=1, Max=NULL){
+RNR2 <- function(data, min=1, max=NULL){
   n <- nrow(data)
-  res <- n >= Min
-  if (!is.null(Max)) res <- res & n <= Max
+  res <- n >= min
+  if (!is.null(max)) res <- res & n <= max
   res
 }

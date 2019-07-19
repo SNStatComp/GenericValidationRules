@@ -5,18 +5,18 @@
 \alias{RNR2}
 \title{Check number of records.}
 \usage{
-RNR(data, Min = 1, Max = NULL)
+RNR(data, min = 1, max = NULL)
 
-RNR2(data, Min = 1, Max = NULL)
+RNR2(data, min = 1, max = NULL)
 }
 \arguments{
 \item{data}{A bare (unquoted) '\code{.}' when used in a validation rule, otherwise
 a data frame.}
 
-\item{Min}{nonnegative integer}
+\item{min}{nonnegative integer}
 
-\item{Max}{nonnegative integer, not smaller then \code{Min}, or \code{NULL}. If
-\code{Max} is set to \code{NULL}, only the minimum number of records is checked.}
+\item{max}{nonnegative integer, not smaller then \code{min}, or \code{NULL}. If
+\code{max} is set to \code{NULL}, only the minimum number of records is checked.}
 }
 \value{
 For \code{RNR} A \code{logical} vector of length \code{nrow(data)}. All \code{FALSE} when
@@ -44,10 +44,10 @@ as.data.frame(cf)
 
 
 # Using RNR directly
-RNR(RNRdat, Min=4)
+RNR(RNRdat, min=4)
 
 # Using RNR with 'validate' (NOTE: data= . )
-rule <- validator(RNR(data=., Min=4) == TRUE)
+rule <- validator(RNR(data=., min=4) == TRUE)
 cf <- confront(RNRdat, rule)
 out <- as.data.frame(cf)
 
