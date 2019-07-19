@@ -24,6 +24,28 @@ VAD_equal <- function(x, field, aggregate_code, ref, tolerance) {
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VAD
 #' 
+#' 
+#' @examples 
+#' 
+#' 
+#' data(VADdat)
+#' data(HT_AGE_GROUPSdat)
+#'
+#' # Example in par 4.3.6 of ESTAT doc, using 'validate'
+#' library(validate)
+#' rule <- validator(VAD(data=., field='AGE', aggregate_code='TOTAL', operator='='
+#'   , tolerance='0.01', ref=refdata) == TRUE)
+#' cf <- confront(VADdat, rule, ref=list(refdata=HT_AGE_GROUPSdat))
+#' summary(cf)
+#' as.data.frame(cf)
+#' 
+#' # example using VAD directly
+#' 
+#' VAD(data=VADdat, field='AGE', aggregate_code='TOTAL', operator='='
+#'   , tolerance='0.01', ref=HT_AGE_GROUPSdat)
+#' 
+#' 
+#' 
 #' @export
 VAD <- function(data, field, aggregate_code, operator, tolerance, refdata) {
   keys <- setdiff(colnames(data), c(field, 'OBS_VALUE', 'OBS_STATUS'))

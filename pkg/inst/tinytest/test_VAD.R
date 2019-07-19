@@ -13,7 +13,6 @@ rule <- validator(VAD(data=., field='AGE', aggregate_code='TOTAL', operator='='
   , tolerance='0.01', ref=refdata) == TRUE)
 cf <- confront(VADdat, rule, ref=list(refdata=HT_AGE_GROUPSdat))
 
-summary(cf)
 out <- as.data.frame(cf)
 
 expect_equal(out$value, c(TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE))
