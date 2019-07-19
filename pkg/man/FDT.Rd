@@ -58,6 +58,6 @@ FDT(FDTdat$OBS_VALUE, ft="Numeric", exceptions="NA")
 Other validation-functions: \code{\link{COC}},
   \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
   \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
-  \code{\link{VCO}}, \code{\link{VIR}}
+  \code{\link{VCO}}, \code{\link{VIR}}, \code{\link{VSA}}
 }
 \concept{validation-functions}

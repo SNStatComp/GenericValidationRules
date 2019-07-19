@@ -50,6 +50,6 @@ as.data.frame(cf)
 Other validation-functions: \code{\link{COC}},
   \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
   \code{\link{FDT}}, \code{\link{RNR}}, \code{\link{RTS}},
-  \code{\link{RWD}}, \code{\link{VIR}}
+  \code{\link{RWD}}, \code{\link{VIR}}, \code{\link{VSA}}
 }
 \concept{validation-functions}

@@ -77,6 +77,6 @@ FDL(FDLdat$PARTNER, min=2, max=4)
 Other validation-functions: \code{\link{COC}},
   \code{\link{COV}}, \code{\link{FDM}}, \code{\link{FDT}},
   \code{\link{RNR}}, \code{\link{RTS}}, \code{\link{RWD}},
-  \code{\link{VCO}}, \code{\link{VIR}}
+  \code{\link{VCO}}, \code{\link{VIR}}, \code{\link{VSA}}
 }
 \concept{validation-functions}
