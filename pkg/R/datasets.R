@@ -15,6 +15,8 @@
 #'    \item{\code{COC3dat}}
 #'    \item{\code{COC4dat}}
 #'    \item{\code{COC5dat}}
+#'    \item{\code{FDLdat}}
+#'    \item{\code{FDL2dat}}
 #'    \item{\code{FDMdat}}
 #'    \item{\code{REPdat}}
 #'    \item{\code{RNRdat}}
@@ -51,6 +53,13 @@
 #' @rdname COVdat
 {}
 
+#' @name FDLdat
+#' @rdname COVdat
+{}
+
+#' @name FDL2dat
+#' @rdname COVdat
+{}
 
 #' @name FDMdat
 #' @rdname COVdat

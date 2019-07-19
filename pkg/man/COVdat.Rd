@@ -8,11 +8,12 @@
 \alias{COC3dat}
 \alias{COC4dat}
 \alias{COC5dat}
+\alias{FDLdat}
+\alias{FDL2dat}
 \alias{FDMdat}
 \alias{REPdat}
 \alias{RNRdat}
 \alias{RWDdat}
-\alias{FDLdat}
 \alias{FDTdat}
 \alias{RTSdat}
 \alias{VIRdat}
@@ -34,6 +35,8 @@ datasets are available:
    \item{\code{COC3dat}}
    \item{\code{COC4dat}}
    \item{\code{COC5dat}}
+   \item{\code{FDLdat}}
+   \item{\code{FDL2dat}}
    \item{\code{FDMdat}}
    \item{\code{REPdat}}
    \item{\code{RNRdat}}

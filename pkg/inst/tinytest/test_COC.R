@@ -5,13 +5,13 @@ data(COCdat)
 rules <- validator(
       if (TABLE == "T01") FREQ == "A"
     , if (TABLE == "T02") FREQ == "Q")
-cf  <- confront(COCdat, rules)
+cf  <- confront(COCdat, rules, raise="all")
 out <- as.data.frame(cf)
 expect_equal(out$value, c(FALSE, TRUE, TRUE, TRUE, TRUE, TRUE))
 
 # example 2 (same ruleset)
 data(COC2dat)
-cf <- confront(COC2dat, rules)
+cf <- confront(COC2dat, rules, raise="all")
 out <- as.data.frame(cf)
 expect_equal(out$value, c(TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE))
 
@@ -19,7 +19,7 @@ expect_equal(out$value, c(TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE))
 data(COC3dat)
 
 rules <- validator(REPORTING == "EL")
-cf <- confront(COC3dat, rules)
+cf <- confront(COC3dat, rules, raise="all")
 out <- as.data.frame(cf)
 expect_equal(out$value, c(TRUE, TRUE, FALSE))
 
@@ -37,14 +37,14 @@ COC4dat$REPORTING <- as.character(COC4dat$REPORTING)
 COC4dat$PARTNER <- as.character(COC4dat$PARTNER)
 rules <- validator(REPORTING != PARTNER)
 
-cf <- confront(COC4dat, rules)
+cf <- confront(COC4dat, rules, raise="all")
 out <- as.data.frame(cf)
 expect_equal(out$value, c(TRUE, TRUE, FALSE, TRUE ))
 
 # example 5
 data(COC5dat)
 rules <- validator( if ( TABLE == "T01" ) ADJUST == "N" )
-cf <- confront(COC5dat, rules)
+cf <- confront(COC5dat, rules, raise="all")
 out <- as.data.frame(cf)
 expect_equal(out$value, c(TRUE, TRUE, FALSE, TRUE))
 

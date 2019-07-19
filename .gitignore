@@ -37,3 +37,6 @@ vignettes/*.pdf
 rsconnect/
 doc/~$functions.xlsx
 
+# generated pdf manual
+manual.pdf
+
