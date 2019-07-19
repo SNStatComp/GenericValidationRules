@@ -22,6 +22,8 @@ This is work in progress.
 - RWD
 - COC
 - VIR
+- VCO
+- VAD
 
 ### Todo's
 - error handling, incorrect parameters, etc.
