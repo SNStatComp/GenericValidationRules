@@ -16,16 +16,18 @@ VAD_equal <- function(x, field, aggregate_code, ref, tolerance) {
 #' @param aggregate_code a charactar scalar containing the code for the aggregate.
 #' @param operator a charactar scalar containing a relational Operator between aggregates and the sum of detailed data
 #' @param tolerance (acceptable margin) expressed in a absolute number
+#' @param ref When called directly, a data frame. When used in a validation rule, the name of the 
+#'    reference variable passed to \code{confront}.
 #' @return A \code{logical} vector with length the number of records. Each element of this vector contains the result of the check
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VAD
 #' 
 #' @export
-VAD <- function(data, field, aggregate_code, operator, tolerance) {
+VAD <- function(data, field, aggregate_code, operator, tolerance, refdata) {
   keys <- setdiff(colnames(data), c(field, 'OBS_VALUE', 'OBS_STATUS'))
   res <- switch (operator,
-    '=' = unsplit(lapply(split(data, data[keys]), VAD_equal, field, aggregate_code, ref, tolerance), data[keys])
+    '=' = unsplit(lapply(split(data, data[keys]), VAD_equal, field, aggregate_code, refdata, tolerance), data[keys])
   )
   return(res)
 }
