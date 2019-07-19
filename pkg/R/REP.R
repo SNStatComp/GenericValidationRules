@@ -65,25 +65,3 @@ REP <- function(coverage=c("Min", "Max", "Only", "Excl"), keyTable, ...) {
   return(res)
 }
 
-
-<<<<<<< HEAD
-#' @export
-REP <- function(coverage=c("Min", "Max", "Only", "Excl"), ...) {
-  d <- data.frame(...)
-  keys <- setdiff(colnames(d), colnames(ref))
-  res <- switch (coverage,
-    Only = unsplit(lapply(split(d, d[keys]), REP_only, ref), d[keys])
-  )
-  return(res)
-=======
-REP_only <- function(x, y) {
-  xs = do.call(paste,x[colnames(y)])
-  ys = do.call(paste, y)
-#  print(xs)
-#  print(ys)
-  res <- all(xs %in% ys & ys %in% xs)
-  return(res)
-  
->>>>>>> 3758ff8284727b3b5fc159278c12e6e4fff4caf1
-}
-
