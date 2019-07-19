@@ -51,12 +51,13 @@ as.data.frame(cf)
 
 }
 \references{
-\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
+\href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VSA
 }
 \seealso{
 Other validation-functions: \code{\link{COC}},
   \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
   \code{\link{FDT}}, \code{\link{RNR}}, \code{\link{RTS}},
-  \code{\link{RWD}}, \code{\link{VCO}}, \code{\link{VIR}}
+  \code{\link{RWD}}, \code{\link{VAD}}, \code{\link{VCO}},
+  \code{\link{VIR}}
 }
 \concept{validation-functions}

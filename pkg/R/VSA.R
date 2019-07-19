@@ -16,10 +16,11 @@
 #' @param sa A character scalar. The code used to indicate seasonally adjusted data. 
 #' @param idvars  character vector with names of all dimensions (identifying variables), except for 
 #'   the time period and the adjustment status.
+#'
 #' @family validation-functions
 #' @references 
 #' 
-#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: FDL
+#' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VSA
 #' 
 #' @examples
 #' data(VSAdat)

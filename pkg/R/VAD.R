@@ -20,6 +20,9 @@ VAD_equal <- function(x, field, aggregate_code, ref, tolerance) {
 #' @param refdata When called directly, a data frame. When used in a validation rule, the name of the 
 #'    reference variable passed to \code{confront}.
 #' @return A \code{logical} vector with length the number of records. Each element of this vector contains the result of the check
+#'
+#' 
+#' @family validation-functions
 #' @references 
 #' 
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: VAD

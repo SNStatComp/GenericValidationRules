@@ -60,6 +60,7 @@ out <- as.data.frame(cf)
 Other validation-functions: \code{\link{COC}},
   \code{\link{COV}}, \code{\link{FDL}}, \code{\link{FDM}},
   \code{\link{FDT}}, \code{\link{RTS}}, \code{\link{RWD}},
-  \code{\link{VCO}}, \code{\link{VIR}}, \code{\link{VSA}}
+  \code{\link{VAD}}, \code{\link{VCO}}, \code{\link{VIR}},
+  \code{\link{VSA}}
 }
 \concept{validation-functions}
