@@ -2,32 +2,24 @@
 
 Implementations of [generic ESS validation
 rules](pkg/inst/doc/20180202_maintypes.pdf) in R-validate syntax.  These are
-the 20 most commonly used data validation checks as defined by Eurostat.
-
-
-
-
+the 21 main types of validation rules  for validating ESS data as defined by Eurostat.
 
 
 #### Implemented:
 
-- COV 
-- FDL 
-- FDM 
-- FDT
-- REP
-- RTS
-- RNR
-- RWD
-- COC
-- VIR
-- VCO
-- VAD
-- VSA
-
-### Todo's
-- error handling, incorrect parameters, etc.
-
+- FDT: FielD Type
+- FDL: FielD Length
+- FDM: FielD is Manatory or empty
+- COV: COdes are Valid
+- RWD: Records are Without Duplicate id-keys
+- REP: Records Expected are Provided
+- RTS: Records are all present for Time Series
+- RNR: Records' Number is in a Range
+- COC: COdes are Consistent
+- VIR: Values are In a Range
+- VCO: Values are COnsistent
+- VAD: Valueas for Aggregates are consistent with Details
+- VSA: Values for Seasonally Adjusted data are plausible
 
 
 ### Installating the R package
