@@ -9,6 +9,26 @@ period_type <- function(x, undefined=NA_character_){
   undefined
 }
 
+
+#' Turn a period into an integer
+#' 
+#' Annual periods are turned in to the integer year. Quarterly 
+#' and Monthly periods are turned in to the month number, counted
+#' from the year zero, so quarters and months have consecutive numbers
+#' accross years.
+#'
+#' @param x a \code{character} vector.
+#' @param from \code{character} scalar, indicating the period format 
+#' (see \code{\link{RTS}} for supported formats).
+#'
+#'
+#' @examples
+#' 
+#' periods <- c("2018-Q4","2019-Q1")
+#' period_to_int(periods, from="quarterly")
+#'
+#' @family utilities
+#' @export
 period_to_int <- function(x, from = c("annual","quarterly","monthly")){
   from <- match.arg(from)
 
@@ -37,6 +57,24 @@ period_to_int <- function(x, from = c("annual","quarterly","monthly")){
 is_gapless <- function(x){
   has_no_gaps <- all(diff(sort(x)) == 1)
   rep(has_no_gaps, length(x))
+}
+
+#' Integer year from period string
+#' 
+#' Extracts first four characters of each element of \code{x} and converts
+#' to integer.
+#'
+#' @param x a \code{character} vector.
+#'
+#'
+#' @examples
+#' periods <- c("2018-Q4","2019-Q1")
+#' year_from_period(periods)
+#'
+#' @family utilities
+#' @export
+year_from_period <- function(x){
+  as.integer(substr(x,1,4))
 }
 
 
@@ -72,6 +110,7 @@ is_gapless <- function(x){
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RTS
 #'
 #' @examples
+#' # RTS examples
 #' data(RTSdat)
 #' 
 #' # Example using RTS with 'validate'

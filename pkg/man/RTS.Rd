@@ -29,12 +29,13 @@ the variable indicating the time period must be both gapless and within bounds.
 The following notations for time periods are supported:
 \itemize{
   \item{\code{YYYY}: annual data, e.g. \code{"2016"}}
-  \item{\code{YYYYQN}: quarterly data, e.g. \code{"2016Q1"}}
+  \item{\code{YYYY-?QN}: quarterly data, e.g. \code{"2016Q1"} or \code{"2016-Q1"}}
   \item{\code{YYYYMNN}: monthly data, e.g. \code{"2016M01"}, \code{"2016M10"}} 
 }
 }
 
 \examples{
+# RTS examples
 data(RTSdat)
 
 # Example using RTS with 'validate'
