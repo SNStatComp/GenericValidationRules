@@ -2,7 +2,7 @@
 
 period_type <- function(x, undefined=NA_character_){
   if ( all( grepl("^[12][0-9]{3}$",x) ) )           return("annual")
-  if ( all( grepl("^[12][0-9]{3}Q[1-4]$",x) ) )     return("quarterly")
+  if ( all( grepl("^[12][0-9]{3}-?Q[1-4]$",x) ) )   return("quarterly")
   if ( all( grepl("^[12][0-9]{3}M[01][0-9]$",x) ) ) return("monthly")
 
   warning("Undefined period type or different period types in single column.", call.=FALSE)
@@ -18,7 +18,7 @@ period_to_int <- function(x, from = c("annual","quarterly","monthly")){
 
 
   if (from ==  "quarterly" ){
-    L       <- strsplit(x,"Q")
+    L       <- strsplit(x,"-?Q")
     year    <- as.numeric(sapply(L, `[[`,1))
     quarter <- as.numeric(sapply(L, `[[`, 2))
     res     <- 4*year + quarter-1
@@ -61,7 +61,7 @@ is_gapless <- function(x){
 #' The following notations for time periods are supported:
 #' \itemize{
 #'   \item{\code{YYYY}: annual data, e.g. \code{"2016"}}
-#'   \item{\code{YYYYQN}: quarterly data, e.g. \code{"2016Q1"}}
+#'   \item{\code{YYYY-?QN}: quarterly data, e.g. \code{"2016Q1"} or \code{"2016-Q1"}}
 #'   \item{\code{YYYYMNN}: monthly data, e.g. \code{"2016M01"}, \code{"2016M10"}} 
 #' }
 #'
