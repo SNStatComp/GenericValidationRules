@@ -24,6 +24,12 @@ the 21 main types of validation rules  for validating ESS data as defined by Eur
 
 ### Installating the R package
 
+From R, using the `remotes` package:
+
+```r
+remotes::install_github("SNStatComp/GenericValidationRules/pkg")
+```
+
 Using `Make` on your OS's command line:
 
 ```bash
@@ -31,10 +37,3 @@ git clone https://github.com/SNStatComp/GenericValidationRules
 cd GenericValidationRules
 make install
 ```
-
-From R, using the `remotes` package:
-
-```r
-remotes::install_github("SNStatComp/GenericValidationRules/pkg")
-```
-
