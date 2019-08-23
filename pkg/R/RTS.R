@@ -2,13 +2,33 @@
 
 period_type <- function(x, undefined=NA_character_){
   if ( all( grepl("^[12][0-9]{3}$",x) ) )           return("annual")
-  if ( all( grepl("^[12][0-9]{3}Q[1-4]$",x) ) )     return("quarterly")
+  if ( all( grepl("^[12][0-9]{3}-?Q[1-4]$",x) ) )   return("quarterly")
   if ( all( grepl("^[12][0-9]{3}M[01][0-9]$",x) ) ) return("monthly")
 
   warning("Undefined period type or different period types in single column.", call.=FALSE)
   undefined
 }
 
+
+#' Turn a period into an integer
+#' 
+#' Annual periods are turned in to the integer year. Quarterly 
+#' and Monthly periods are turned in to the month number, counted
+#' from the year zero, so quarters and months have consecutive numbers
+#' accross years.
+#'
+#' @param x a \code{character} vector.
+#' @param from \code{character} scalar, indicating the period format 
+#' (see \code{\link{RTS}} for supported formats).
+#'
+#'
+#' @examples
+#' 
+#' periods <- c("2018-Q4","2019-Q1")
+#' period_to_int(periods, from="quarterly")
+#'
+#' @family utilities
+#' @export
 period_to_int <- function(x, from = c("annual","quarterly","monthly")){
   from <- match.arg(from)
 
@@ -18,7 +38,7 @@ period_to_int <- function(x, from = c("annual","quarterly","monthly")){
 
 
   if (from ==  "quarterly" ){
-    L       <- strsplit(x,"Q")
+    L       <- strsplit(x,"-?Q")
     year    <- as.numeric(sapply(L, `[[`,1))
     quarter <- as.numeric(sapply(L, `[[`, 2))
     res     <- 4*year + quarter-1
@@ -37,6 +57,24 @@ period_to_int <- function(x, from = c("annual","quarterly","monthly")){
 is_gapless <- function(x){
   has_no_gaps <- all(diff(sort(x)) == 1)
   rep(has_no_gaps, length(x))
+}
+
+#' Integer year from period string
+#' 
+#' Extracts first four characters of each element of \code{x} and converts
+#' to integer.
+#'
+#' @param x a \code{character} vector.
+#'
+#'
+#' @examples
+#' periods <- c("2018-Q4","2019-Q1")
+#' year_from_period(periods)
+#'
+#' @family utilities
+#' @export
+year_from_period <- function(x){
+  as.integer(substr(x,1,4))
 }
 
 
@@ -61,7 +99,7 @@ is_gapless <- function(x){
 #' The following notations for time periods are supported:
 #' \itemize{
 #'   \item{\code{YYYY}: annual data, e.g. \code{"2016"}}
-#'   \item{\code{YYYYQN}: quarterly data, e.g. \code{"2016Q1"}}
+#'   \item{\code{YYYY-?QN}: quarterly data, e.g. \code{"2016Q1"} or \code{"2016-Q1"}}
 #'   \item{\code{YYYYMNN}: monthly data, e.g. \code{"2016M01"}, \code{"2016M10"}} 
 #' }
 #'
@@ -72,6 +110,7 @@ is_gapless <- function(x){
 #' \href{../doc/20180202_maintypes.pdf}{Main types of validation rules for ESS data}: RTS
 #'
 #' @examples
+#' # RTS examples
 #' data(RTSdat)
 #' 
 #' # Example using RTS with 'validate'

@@ -1,7 +1,7 @@
 Package: GenericValidationRules
 Type: Package
 Title: Generic Validation Rules for the European Statistical System
-Version: 0.1.0
+Version: 0.5.0
 Date: 2019-07-12
 Author: Olav ten Bosch, Dick Windmeijer, Mark van der Loo
 Maintainer: Mark van der Loo <mark.vanderloo@gmail.com>
